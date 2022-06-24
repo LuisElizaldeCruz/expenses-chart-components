@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
   <title>Frontend Mentor | Expenses chart component</title>
-<script src="./node_modules/chart.js/dist/chart.js"></script>
+
 </head>
+
 <body>
 
   <!-- My balance
@@ -30,10 +33,26 @@
   +2.4%
   from last month
    -->
-<canvas id="miGrafica" ></canvas>
-
-
-<div class="usuarios"></div>
-   <script src="./js/script.js"></script>
+  <section class="contenedor">
+    <div class="cabecera">
+      <div class="cabeceraDatos">
+      <p class="tituloDatos">My balance</p>
+      <p class="balance">$921.48</p>
+    </div>
+      <img class="logo" src="./images/logo.svg" alt="">
+    </div>
+    <div class="graficaContenedor">
+      <canvas id="miGrafica"></canvas> 
+      <div class="resultados">
+        <p class="suma">total this month <br> <span>suma</span></p>
+        <p class="porcentaje"><span>2%</span> <br> from last month</p>
+      </div>
+    </div>
+  
+  </section>
+  <div class="usuarios"></div>
+  <script src="./js/script.js"></script>
+  <script src="./node_modules/chart.js/dist/chart.js"></script>
 </body>
+
 </html>

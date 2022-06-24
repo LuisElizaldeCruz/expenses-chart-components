@@ -21,22 +21,26 @@
 })();
 */
 
+
 const usuarios = document.querySelector(".usuarios");
+const grafica = document.querySelector(".suma>span");
 //fragmento = document.createDocumentFragment();
 let dias = [];
 let monto = [];
+let suma=0;
 
-fetch("http://127.0.0.1:5500/data.json")
+fetch("./data.json")
     .then((res) => {
         console.log(res);
         return res.ok ? res.json() : Promise.reject(res);//ya la va a devolver en formato json
     })
     .then(json => {
         json.forEach((el) => {
-            const li = document.createElement("li");
+           // const li = document.createElement("li");
           //  li.innerHTML = `${el.day} -- ${el.amount}`;
           //  fragmento.appendChild(li);
-
+           
+            suma += parseInt(el.amount);
             dias.push(el.day);
             monto.push(el.amount);
         });
@@ -79,6 +83,13 @@ fetch("http://127.0.0.1:5500/data.json")
             }
         });
         /*termina el dibujado de la grafica*/
+       /* const li = document.createElement("li");
+        li.className = "monto";
+        li.textContent=suma;
+        li.insertAdjacentElement("beforeend",grafica);
+        console.log(suma);
+        */
+       grafica.textContent = suma;
     })
     .catch((err) => {
         console.log("estamos en el catch ", err);

@@ -9,7 +9,56 @@
 --Medium-brown: hsl(28, 10%, 53%);
 --Cream: hsl(27, 66%, 92%);
 --Very-pale-orange: hsl(33, 100%, 98%);
+}
 
+body{
+    background-color: var(--Cream);
+}
+
+.contenedor{
+    width: 400px;
+    height: auto;
+    margin: auto;
+}
+
+.cabecera{
+    background-color: var(--Soft-red);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+    height: 50px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.cabeceraDatos{
+    height: auto;
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+}
+
+.tituloDatos{
+    font-size: smaller;
+}
+
+.balance{
+    font-weight: bold;
+}
+.tituloDatos, .balance{
+    margin: 0;
+    color: var(--Very-pale-orange);
+}
+
+
+.graficaContenedor{
+    width: auto;
+    height: auto;
+    background-color: var(--Very-pale-orange);
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 #miGrafica{
@@ -17,6 +66,36 @@
     height: 400px;
 }
 
+.resultados{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.suma{
+    font-size: smaller;
+    text-align: center;
+    color: var(--Medium-brown);
+}
+
+.suma>span{
+    font-size: 30px;
+    font-weight: 800;
+    color: black;
+}
+
+.porcentaje{
+   font-size: smaller;
+   text-align: end;
+   color: var(--Medium-brown);
+}
+
+.porcentaje>span{
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+}
 /*
 li{
     display: none;
